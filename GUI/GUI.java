@@ -3,13 +3,14 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class GUI extends JFrame {
 
-	private JPanel contentPane;
+	private JPanelConFondo contentPane ;
 
 	/**
 	 * Launch the application.
@@ -33,10 +34,11 @@ public class GUI extends JFrame {
 	public GUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+		contentPane = new JPanelConFondo(new ImageIcon(getClass().getResource("/Imagenes/IMG_3071.jpg")).getImage());
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		
 	}
 
 }
